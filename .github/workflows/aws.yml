@@ -2,7 +2,7 @@ name: workflow-input-demop
 on:
   workflow_dispatch:
     inputs:
-      name:
+      environment:
         type: choice
         description: where to deploy
         options: 
@@ -18,4 +18,4 @@ jobs:
 
     steps:
     - name: print msg
-      run: echo "${{ github.event.inputs.message }}
+      run: echo "${{ github.event.inputs.message }}- ${{ github.event.inputs.environment }}"
