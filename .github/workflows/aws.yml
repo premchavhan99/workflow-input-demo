@@ -1,0 +1,21 @@
+name: workflow-input-demop
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: choice
+        description: where to deploy
+        options: 
+        - dev
+        - prod
+      message:
+        required: true
+   
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: print msg
+      run: echo "${{ github.event.inputs.message }}
