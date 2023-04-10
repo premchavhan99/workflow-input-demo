@@ -1,14 +1,17 @@
 name: workflow-input-demop
 on:
   workflow_dispatch:
+    branches:
+      - 'release/**'
     inputs:
       environment:
         type: choice
-        description: where to deploy
-        options: 
+        description: Environment to deploy
+        options:
         - dev
+        - uat
         - prod
-      message:
+        - prod-ca
         required: true
    
 
