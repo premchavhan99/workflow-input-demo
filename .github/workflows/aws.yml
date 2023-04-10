@@ -9,7 +9,6 @@ on:
         description: Environment to deploy
         options:
         - dev
-        - uat
         - prod
         - prod-ca
         required: true
